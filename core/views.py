@@ -51,4 +51,4 @@ def search(request):
     data.append(name)
     data.append(location)
     data.append(link)
-    return render(request, 'result.html', {'date':date})
+    return render(request, 'result.html', {'date':content})
