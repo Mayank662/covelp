@@ -7,15 +7,18 @@ import re
 import string
 import preprocessor as p
 
+import sys
+sys.path.insert(1, '/home/mayank/Documents/Projects/covelp')
+import config
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 
 def search(request):
-    consumer_key = 'z18WrER64TXmSgHOLijYhu8oj'
-    consumer_secret = 'TITG51MsArRqRXQ49g5U8nUDI4yb8M9oPhBM0qbTiM7AodYdyp'
-    access_key = '1354434577096445953-QMdZip0jp4DB37Ma6QHx1r24IGUES8'
-    access_secret = '4QWNI0719wojkDAOV3BPaZEkXY46q08CphcaVG0EON4jp'
+    consumer_key = config.consumer_key
+    consumer_secret = config.consumer_secret
+    access_key = config.access_key
+    access_secret = config.access_secret
 
     # Pass your twitter credentials to tweepy via its OAuthHandler
  
@@ -48,4 +51,4 @@ def search(request):
     data.append(name)
     data.append(location)
     data.append(link)
-    return render(request, 'result.html', {'data':data})
+    return render(request, 'result.html', {'date':date})

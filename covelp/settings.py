@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import sys
+
+sys.path.insert(1, '/home/mayank/Documents/Projects/covelp') 
+import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'z@4k@w_#k#qfrag%l^5^^ijeox*g6nw1!3xo+3&-#ssc6rr=*4'
+SECRET_KEY = config.secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
