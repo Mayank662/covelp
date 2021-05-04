@@ -15,10 +15,17 @@ def home(request):
     return render(request, 'home.html')
 
 def search(request):
+<<<<<<< HEAD
     consumer_key = config.consumer_key
     consumer_secret = config.consumer_secret
     access_key = config.access_key
     access_secret = config.access_secret
+=======
+    consumer_key = ''
+    consumer_secret = ''
+    access_key = ''
+    access_secret = ''
+>>>>>>> 05faf74699d1a20482febb2f467543ce189ac2e2
 
     # Pass your twitter credentials to tweepy via its OAuthHandler
  
@@ -51,4 +58,8 @@ def search(request):
     data.append(name)
     data.append(location)
     data.append(link)
+<<<<<<< HEAD
     return render(request, 'result.html', {'date':date})
+=======
+    return render(request, 'result.html', {'data':data})
+>>>>>>> 05faf74699d1a20482febb2f467543ce189ac2e2
